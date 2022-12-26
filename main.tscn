@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvdn2m4t6dcor"]
+
+[ext_resource type="PackedScene" uid="uid://beb3t0ger2uq4" path="res://player/player.tscn" id="1_ggiw0"]
+[ext_resource type="PackedScene" uid="uid://r3w0qi067clx" path="res://environment/map.tscn" id="2_562pj"]
+[ext_resource type="PackedScene" uid="uid://dc4ssru3lpidk" path="res://enemy/enemy.tscn" id="3_0h1lc"]
+
+[node name="main" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("2_562pj")]
+position = Vector2(-45, -24)
+
+[node name="Enemy" parent="Map" instance=ExtResource("3_0h1lc")]
+position = Vector2(-62, -51)
+rotation = -1.07243
+
+[node name="Player" parent="Map" instance=ExtResource("1_ggiw0")]
+unique_name_in_owner = true
+position = Vector2(60, 25)
